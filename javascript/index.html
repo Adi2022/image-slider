@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+  <title>Card with sliding features</title>
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.parent{
+width:100%;
+color:red;
+}
+
+.child{
+width:50%;
+color:greenyellow;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    img{
+      width:140px;
+      height:140px;
+      border-radius: 50%;
+      padding: 1px;
+      background:  #7d2ae8;
+    }
+    body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+}
+
+.card{
+  position:relative;
+  border-radius: 20%;
+  background: #fff;
+  margin: 20px 0;
+ 
+}
+
+.card::before{
+content:'';
+position:absolute;
+height:45%;
+width: 100%;
+background: #7d2ae8;
+border-radius: 20px 20px 0 0;
+}
+
+.card .card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 100;
+}
+.card .media-icons{
+  position:absolute;
+  top:10px;
+  right:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card .media-icons i{
+color:#fff;
+margin-top: 10px;
+opacity:0.6;
+transition: all 0.3s ease;
+cursor: pointer;
+}
+.card .media-icons i:hover{
+opacity: 1;
+}
+.card .name-profession{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  color:#333;
+}
+.name-profession  .name{
+  font-size: 20px;
+  font-weight: 600;
+}
+.name-profession  .profession{
+  font-size: 15px;
+  font-weight: 600;
+}
+.card .rating{
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+.swiper{
+  width:950px;
+}
+.card .rating i{
+  font-size: 18px;
+  margin:0 2px;
+  color:#7d2ae8;
+}
+
+.card .button{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+}
+.card .button button{
+  background-color: #7d2ae8;
+  outline: none;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  padding:8px 22px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.button button:hover{
+  background: #6616d0;
+}
+.section{
+  position: relative;
+  height:450px;
+  width:1075;
+  display: flex;
+  align-items: center;
+  background:red ;
+}
+.swiper-pagination-bullet{
+  height: 7px;
+  width:26px;
+   border-radius: 25px;
+   background: #7d2ae8;
+
+}
+
+  </style>
+
+</head>
+<body>
+  <div class="parent">
+    <div class="child">
+  
+    </div>
+  </div>
+  <section>
+    <div class="swiper mySwiper container">
+      <div class="swiper-wrapper content">
+        <div class=" swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="images/image1.jpg" alt="">
+              
+            </div>
+            <div class="media-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram-square"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="name-profession">
+              <span class='name'> Someone Name</span>
+              <span class='profession'>Full Stack Developer</span>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="button">
+              <button class="aboutMe">
+                About Me
+              </button>
+              <button class="hireMe">
+                Hire Me
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class=" swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="images/image2.jpg" alt="">
+              
+            </div>
+            <div class="media-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram-square"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="name-profession">
+              <span class='name'> Someone Name</span>
+              <span class='profession'>Full Stack Developer</span>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="button">
+              <button class="aboutMe">
+                About Me
+              </button>
+              <button class="hireMe">
+                Hire Me
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class=" swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="images/image3.jpg" alt="">
+              
+            </div>
+            <div class="media-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram-square"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="name-profession">
+              <span class='name'> Someone Name</span>
+              <span class='profession'>Full Stack Developer</span>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="button">
+              <button class="aboutMe">
+                About Me
+              </button>
+              <button class="hireMe">
+                Hire Me
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class=" swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="images/image4.jpg" alt="">
+              
+            </div>
+            <div class="media-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram-square"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="name-profession">
+              <span class='name'> Someone Name</span>
+              <span class='profession'>Full Stack Developer</span>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="button">
+              <button class="aboutMe">
+                About Me
+              </button>
+              <button class="hireMe">
+                Hire Me
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class=" swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="images/image5.jpg" alt="">
+              
+            </div>
+            <div class="media-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram-square"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="name-profession">
+              <span class='name'> Someone Name</span>
+              <span class='profession'>Full Stack Developer</span>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="button">
+              <button class="aboutMe">
+                About Me
+              </button>
+              <button class="hireMe">
+                Hire Me
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class=" swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="images/image7.jpg" alt="">
+              
+            </div>
+            <div class="media-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram-square"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="name-profession">
+              <span class='name'> Someone Name</span>
+              <span class='profession'>Full Stack Developer</span>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="button">
+              <button class="aboutMe">
+                About Me
+              </button>
+              <button class="hireMe">
+                Hire Me
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class=" swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="images/image8.jpg" alt="">
+              
+            </div>
+            <div class="media-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram-square"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="name-profession">
+              <span class='name'> Someone Name</span>
+              <span class='profession'>Full Stack Developer</span>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="button">
+              <button class="aboutMe">
+                About Me
+              </button>
+              <button class="hireMe">
+                Hire Me
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class=" swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="images/image9.jpg" alt="">
+              
+            </div>
+            <div class="media-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram-square"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="name-profession">
+              <span class='name'> Someone Name</span>
+              <span class='profession'>Full Stack Developer</span>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="button">
+              <button class="aboutMe">
+                About Me
+              </button>
+              <button class="hireMe">
+                Hire Me
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class=" swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="images/image10.jpg" alt="">
+              
+            </div>
+            <div class="media-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram-square"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="name-profession">
+              <span class='name'> Someone Name</span>
+              <span class='profession'>Full Stack Developer</span>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="button">
+              <button class="aboutMe">
+                About Me
+              </button>
+              <button class="hireMe">
+                Hire Me
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+  </section>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+</html>
